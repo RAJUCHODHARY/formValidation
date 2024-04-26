@@ -1,30 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Validation</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-
-<body>
-    <form>
-        <label for="">Name</label>
-        <input id="name" type="text"><br>
-        <p id="nam"></p><br>
-        <label for="">Email</label>
-        <input id="email" type="text"><br>
-        <p id="ema"></p><br>
-        <label for="">Phone No</label>
-        <input id="number" type="text"><br>
-        <p id="num"></p><br>
-        <label for="">Age</label>
-        <input id="age" type="text"><br>
-        <p id="agep"></p>
-        <button id="btn">Submit</button>
-    </form>
-    <script src="script.js"> </script>
-</body>
-
+  <body>
+    <div id="wrapper">
+      <form action="" method="post">
+        <div class="form-group">
+          <input type="text" id="name" placeholder="Name" />
+          <span class="nameError"></span>
+        </div>
+        <div class="form-group">
+          <input type="text" id="phone" placeholder="Phone" />
+          <span class="phoneError"></span>
+        </div>
+        <div class="form-group">
+          <input type="text" id="email" placeholder="Email" />
+          <span class="emailError"></span>
+        </div>
+        <div class="form-group" id="gender">
+          <input type="radio" value="male" name="gen" />Male
+          <input type="radio" value="female" name="gen" />Female
+          <input type="radio" value="other" name="gen" />Other <br>
+          <span class="GenderError"></span>
+        </div>
+        <div class="form-group">
+          <select name="" id="course">
+            <option value="">Select Course</option>
+            <option value="js">JS</option>
+            <option value="react">React</option>
+            <option value="node">Node</option>
+            <option value="angular">Angular</option>
+            <option value="php">PHP</option>
+          </select>
+          <span class="selectsError"></span>
+        </div>
+        <div class="form-group">
+          <textarea
+            name=""
+            placeholder="Address"
+            id="textarea"
+            cols="30"
+            rows="10"
+          ></textarea>
+          <span class="textareaError"></span>
+        </div>
+        <div class="form-group">
+          <input id="btn" type="submit" value="Submit" />
+        </div>
+      </form>
+    </div>
+    <script src="scripts.js"></script>
+  </body>
 </html>
